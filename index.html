@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Homoon Ryu</title>
   <style>
@@ -39,19 +40,81 @@
     a:hover {
       text-decoration: underline;
     }
-  </style>
+  
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section, .container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1.5em;
+    }
+
+
+    .nav-button {
+      flex: 1 1 auto;              /* 자동 크기 조정 */
+      min-width: 100px;            /* 버튼 최소 너비 */
+      max-width: 120px;            /* 최대 너비 제한 */
+      padding: 0.5em 1em;
+      text-align: center;
+      background-color: #007acc;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;         /* 텍스트 줄바꿈 방지 */
+      box-sizing: border-box;
+    }
+
+
+
+    .nav-button:hover {
+      background-color: #005f99;
+    }
+
+    </style>
 </head>
 <body>
   <h1>Homoon Ryu, 류호문</h1>
-  <p>Hi. I am a postdoc researcher in the Institute for Basic Science at Ajou University. (Advisor: Boram Park) <br>
+  <p>Hi. I am a postdoc in the Institute for Basic Science at Ajou University. (Advisor: Boram Park) <br>
     My research interests lie in structural graph theory and combinatorial matrix theory. 
 </p>
 
   <!--<a href="https://arxiv.org/abs/1234.5678">논문</a>
   <a href="https://github.com/Homoon-ryu">GitHub</a>-->
-  <a href="paper.html">Papers</a>
-  <a href="talk.html">Talks</a>
-  <a href="teach.html">Teaching</a>
+
+<div class="button-container">
+  <a class="nav-button" href="paper.html">Papers</a>
+  <a class="nav-button" href="talk.html">Talks</a>
+  <a class="nav-button" href="teach.html">Teaching</a>
+</div>
+
   <a href="CV.pdf">CV</a>
   <a href="mailto:ryuhomoon@ajou.ac.kr">Contact</a>
   
